@@ -1,0 +1,86 @@
+﻿<Page x:Class="up_wpf.Pages.EmployeesPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:up_wpf.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="EmployeesPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+            <RowDefinition Height="35"/>
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock>Фильтрация по имени</TextBlock>
+            <TextBlock Grid.Column="1">Сортировка</TextBlock>
+            <TextBox TextChanged="TextBox_TextChanged" Margin="0, 0, 5, 1" Grid.Row="1"/>
+            <ComboBox SelectedIndex="0" SelectionChanged="ComboBox_SelectionChanged" Margin="5, 0, 0, 1"  Grid.Row="1" Grid.Column="1">
+                <ComboBox.Items>
+                    <ComboBoxItem>По фамилии</ComboBoxItem>
+                    <ComboBoxItem>По зарплате</ComboBoxItem>
+                    <ComboBoxItem>По степени</ComboBoxItem>
+                </ComboBox.Items>
+            </ComboBox>
+        </Grid>
+        
+        <DataGrid Grid.Row="1" AutoGenerateColumns="False" Name="TeachersDG">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding id}"/>
+                <DataGridTemplateColumn Header="Имя">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBox Width="100" Text="{Binding employee.name}" TextChanged="TextBox_TextChanged1"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Должность">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBox Width="100" Text="{Binding employee.position}" TextChanged="TextBox_TextChanged2"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Зарплата">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBox Width="100" Text="{Binding employee.salary}" TextChanged="TextBox_TextChanged3"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Header="Звание">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBox Width="100" Text="{Binding title}" TextChanged="TextBox_TextChanged4"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Степень">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBox Width="100" Text="{Binding degree}" TextChanged="TextBox_TextChanged5"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="2" VerticalAlignment="Stretch">
+            <Button Padding="5, 0" Margin="5" Click="Button_Click_1">Добавить</Button>
+            <Button Padding="5, 0" Margin="5" Click="Button_Click">Удалить</Button>
+        </StackPanel>
+    </Grid>
+</Page>

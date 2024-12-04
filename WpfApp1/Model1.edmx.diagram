@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5bb3488de3654b379809f88811febacc" Name="Diagram1">
+        <EntityTypeShape EntityType="UPModel.academic" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="UPModel.animal" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="UPModel.department" Width="1.5" PointX="3" PointY="7" />
+        <EntityTypeShape EntityType="UPModel.direction_director" Width="1.5" PointX="8.375" PointY="14.75" />
+        <EntityTypeShape EntityType="UPModel.discipline" Width="1.5" PointX="7.5" PointY="6.125" />
+        <EntityTypeShape EntityType="UPModel.employee" Width="1.5" PointX="5.25" PointY="11" />
+        <EntityTypeShape EntityType="UPModel.engineer" Width="1.5" PointX="7.5" PointY="12.125" />
+        <EntityTypeShape EntityType="UPModel.exam" Width="1.5" PointX="9.75" PointY="5.875" />
+        <EntityTypeShape EntityType="UPModel.faculty" Width="1.5" PointX="0.75" PointY="7.375" />
+        <EntityTypeShape EntityType="UPModel.flower" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="UPModel.management" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="UPModel.speciality" Width="1.5" PointX="5.25" PointY="3.375" />
+        <EntityTypeShape EntityType="UPModel.student" Width="1.5" PointX="7.5" PointY="3.375" />
+        <EntityTypeShape EntityType="UPModel.teacher" Width="1.5" PointX="7.5" PointY="9.375" />
+        <EntityTypeShape EntityType="UPModel.ученики" Width="1.5" PointX="9.75" PointY="0.75" />
+        <EntityTypeShape EntityType="UPModel.гимназист" Width="1.5" PointX="9.75" PointY="9.75" />
+        <AssociationConnector Association="UPModel.FK__departmen__facul__5EBF139D" />
+        <AssociationConnector Association="UPModel.FK__disciplin__execu__68487DD7" />
+        <AssociationConnector Association="UPModel.FK__employee__code__619B8048" />
+        <AssociationConnector Association="UPModel.FK__speciality__code__656C112C" />
+        <AssociationConnector Association="UPModel.FK__direction__emplo__6EF57B66" />
+        <AssociationConnector Association="UPModel.FK__exam__discipline__787EE5A0" />
+        <AssociationConnector Association="UPModel.FK__employee__chief__628FA481" />
+        <AssociationConnector Association="UPModel.FK__engineer__employ__70DDC3D8" />
+        <AssociationConnector Association="UPModel.FK__teacher__id__73BA3083" />
+        <AssociationConnector Association="UPModel.FK__exam__student_id__797309D9" />
+        <AssociationConnector Association="UPModel.FK__exam__teacher_id__7A672E12" />
+        <AssociationConnector Association="UPModel.FK__student__special__76969D2E" />
+        <AssociationConnector Association="UPModel.application" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,26 @@
+﻿<Window x:Class="up_wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:up_wpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="699" Width="1000">
+    <Grid Background="#e5d6f3">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="125"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Background="#eee2f8">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="1" Source="/Images/up_logo.png" Height="50"/>
+            <Button HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5" Padding="5" Click="Button_Click_1">QR код</Button>
+            <Button HorizontalAlignment="Right" Grid.Column="2" VerticalAlignment="Center" Margin="5" Padding="5" Click="Button_Click">Назад</Button>
+        </Grid>
+        <Frame NavigationUIVisibility="Hidden" Grid.Row="1" Margin="5" Name="BaseFrame"/>
+    </Grid>
+</Window>
